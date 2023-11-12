@@ -100,8 +100,10 @@ const multiplyThree = function (x, y, z) {
 console.log('-----------------');
 console.log(multiplyThree(4, 5, 6));
 
-const multiplyAll = function (...arguments) {
-    return Object.values(arguments).reduce((a, b) => a * b, 1);
+// next js 프레임워크에서 arguments 키워드를 parameter 사용시 문법 오류 발생
+// const multiplyAll = function (...arguments) {
+const multiplyAll = function (...args) {    
+    return Object.values(args).reduce((a, b) => a * b, 1);
 }
 
 console.log(multiplyAll(3, 4, 5, 6, 7, 8, 9, 10));
@@ -111,5 +113,6 @@ console.log(multiplyAll(3, 4, 5, 6, 7, 8, 9, 10));
     console.log(x * y);
 })(4, 5)
 
-console.log(typeof multiply);
-console.log(multiply instanceof Object);
+console.log(typeof multiply); // function
+// 하지만, 함수는 객체(인스턴스)이다
+console.log(multiply instanceof Object); // true
