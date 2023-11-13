@@ -36,5 +36,5 @@ console.log(yuJin.year);
 console.log(yuJin.sayName());
 console.log(wonYoung.sayName());
 
-console.log(typeof IdolModel);
-console.log(typeof yuJin);
+console.log(typeof IdolModel); // function
+console.log(typeof yuJin); // object
