@@ -121,7 +121,7 @@ console.log("화상표 함수 표현");
 console.log(numbers.sort((a, b) => a - b));
 console.log(numbers.sort((a, b) => b - a));
 
-// map()
+// map(), 원본 변경X, 가공처리 사본 반환
 console.log('--------------');
 console.log(iveMembers.map((x) => x));
 console.log(iveMembers.map((x) => `아이브: ${x}`));
@@ -135,19 +135,23 @@ console.log(iveMembers.map((x) => {
 }));
 console.log(iveMembers);
 
-// filter()
 numbers = [1, 8, 7, 6, 3];
 
+// filter(), 원본 변경X, 가공 사본 반환
 console.log(numbers.filter((x) => x % 2 === 0));
 
-// find()
+// find(), 찾기 조건에 맞는 첫번째 아이템 반환
 console.log(numbers.find((x) => x % 2 === 0));
 
 // findIndex()
 console.log(numbers.findIndex((x) => x % 2 === 0));
 
-// reduce()
-console.log(numbers.reduce((p, n) => p + n, 0));
+// ~.reduce(1st, 2nd)
+// 1st: 콜백 함수 => accumulator(누적 값), currentValue(현재 아이템)
+// 2nd: 초기값(최초 accumulaotr?)  
+console.log(
+  numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+);
 
 // reduce() 퀴즈
 // reduce() 함수를 사용해서 iveMembers 변수에 있는 모든 스트링 값들의
