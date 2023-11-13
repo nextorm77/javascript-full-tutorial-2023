@@ -40,9 +40,11 @@ console.log(yuJin2.dance());
 yuJin2['group'] = '코드팩토리';
 console.log(yuJin2);
 
+// property 추가
 yuJin2['englishName'] = 'An Yu Jin';
 console.log(yuJin2);
 
+// property 삭제
 delete yuJin2['englishName'];
 console.log(yuJin2);
 
@@ -76,7 +78,7 @@ console.log(Object.values(wonYoung));
 const name = '안유진';
 
 const yuJin3 = {
-    name: name,
-    name,
+    // name: name,
+    name, // 위와 동일한 표현, 최근 문법
 };
 console.log(yuJin3);
