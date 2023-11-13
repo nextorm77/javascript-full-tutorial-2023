@@ -12,27 +12,27 @@ let iveMembers = [
 
 console.log(iveMembers);
 
-// push()
+// push(), 원본 수정
 console.log(iveMembers.push('코드팩토리'));
 console.log(iveMembers);
 
 console.log('---------------_');
-// pop()
+// pop(), 원본 수정
 console.log(iveMembers.pop());
 console.log(iveMembers);
 
 console.log('---------------_');
-// shift()
+// shift(), 원본 수정
 console.log(iveMembers.shift());
 console.log(iveMembers);
 
-// unshift()
+// unshift(), 원본 수정
 console.log(iveMembers.unshift('안유진'));
 console.log(iveMembers);
 
 console.log('---------------_');
 
-// splice()
+// splice(), 원본 수정
 console.log(iveMembers.splice(0, 3))
 console.log(iveMembers);
 
@@ -47,10 +47,12 @@ iveMembers = [
 
 console.log(iveMembers);
 
-// concat()
+// 원본 수정x, 변경 내용 사본 리턴
+// concat(), push()와 유사
 console.log(iveMembers.concat('코드팩토리'));
 console.log(iveMembers);
 
+// // 원본 수정x, 변경 내용 사본 리턴
 // slice()
 console.log(iveMembers.slice(0, 3));
 console.log(iveMembers);
@@ -61,6 +63,7 @@ let iveMembers2 = [
 ];
 console.log(iveMembers2);
 
+// 2차 배열(배열속의 배열)
 let iveMembers3 = [
     iveMembers,
 ];
@@ -68,11 +71,12 @@ console.log(iveMembers3);
 
 
 console.log('--------------');
-let iveMembers4 = iveMembers;
 
+let iveMembers4 = iveMembers; //순수 값이 아닌 참조값 할당
 console.log(iveMembers4);
 console.log(iveMembers4 === iveMembers);
 
+// JS는 값이 아닌 참조로 개체를 비교
 console.log([
     ...iveMembers,
 ] === iveMembers);
@@ -83,10 +87,10 @@ console.log(iveMembers.join('/'));
 console.log(iveMembers.join(', '));
 
 // sort()
-// 오름차순
-iveMembers.sort();
-console.log(iveMembers);
+// 오름차순, 원본 수정
+console.log(iveMembers.sort());
 
+// 내림차순, 원본 수정
 console.log(iveMembers.reverse());
 
 let numbers = [
@@ -98,17 +102,22 @@ let numbers = [
 ];
 console.log(numbers);
 
-// a, b를 비교했을때
-// 1) a를 b 보다 나중에 정렬하려면 (뒤에두려면) 0보다 큰 숫자를 반환
-// 2) a를 b 보다 먼저 정렬하려면 (앞에두려면) 0보다 작은 숫자를 반환
-// 3) 원래 순서를 그대로 두려면 0을 반환
-numbers.sort((a, b) => {
-    return a > b ? 1 : -1;
-});
-console.log(numbers);
+console.log(
+  numbers.sort(function (a, b) {
+    return a - b; //앞수가 큰 경우(결과값: 양수)인 앞뒤 변경
+  })
+);
 
-numbers.sort((a, b) => a > b ? -1 : 1);
-console.log(numbers);
+console.log(
+  numbers.sort(function (a, b) {
+    return b - a; //뒷수가 큰 경우(결과값: 양수)인 앞뒤 변경
+  })
+);
+
+console.log("-------------------------");
+console.log("화상표 함수 표현");
+console.log(numbers.sort((a, b) => a - b));
+console.log(numbers.sort((a, b) => b - a));
 
 // map()
 console.log('--------------');
