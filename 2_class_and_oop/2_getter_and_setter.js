@@ -14,10 +14,11 @@ class IdolModel{
      * 1) 데이터를 가공해서 새로운 데이터를 반환할때
      * 2) private한 값을 반환할때
      */
+	// 함수명을 'name'이라고 명명하면 충돌 발생 => 'name'이 현재 private X
     get nameAndYear(){
         return `${this.name}-${this.year}`;
     }
-
+	// 함수명을 'name'이라고 명명하면 충돌 발생 => 'name'이 현재 private X
     set setName(name){
         this.name = name;
     }
@@ -31,7 +32,7 @@ yuJin.setName = '장원영';
 console.log(yuJin);
 
 class IdolModel2{
-    #name;
+    #name; // private 표시, ES7 문법=>최신 브라우저 적용
     year;
 
     constructor(name, year){
