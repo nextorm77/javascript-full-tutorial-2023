@@ -102,15 +102,17 @@ let numbers = [
 ];
 console.log(numbers);
 
+// a: 앞수, b: 뒷수
+// a-b, b-a: 결과값이 양인 경우 앞뒤 변경
 console.log(
   numbers.sort(function (a, b) {
-    return a - b; //앞수가 큰 경우(결과값: 양수)인 앞뒤 변경
+    return a - b; //앞수가 큰 경우(결과값: 양수), 앞뒤 변경
   })
 );
 
 console.log(
   numbers.sort(function (a, b) {
-    return b - a; //뒷수가 큰 경우(결과값: 양수)인 앞뒤 변경
+    return b - a; //뒷수가 큰 경우(결과값: 양수), 앞뒤 변경
   })
 );
 
