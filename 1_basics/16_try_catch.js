@@ -3,6 +3,7 @@
  * 
  * 1) 발생시킬때 -> 던진다고한다. (throw)
  * 2) 명시적으로 인지할때 -> 잡는다고 한다. (catch)
+ * finally는 옵션
  */
 function runner() {
     try {
