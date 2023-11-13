@@ -71,25 +71,31 @@ console.log(yuJin4);
 
 console.log(yuJin4 === yuJin3);
 
+// 맨 앞에 필드 추가
 const yuJin5 = {
     year: 2003,
     ...yuJin3,
 };
 console.log(yuJin5);
 
+// 중첩 필드값은 마지막에 입력되는 값으로 변경
 const yuJin6 = {
     name: '코드팩토리',
     ...yuJin3,
 };
+// 출력되는 필드의 위치는 중요X
 console.log(yuJin6);
 
+// 중첩 필드값은 마지막에 입력되는 값으로 변경
 const yuJin7 = {
     ...yuJin3,
     name: '코드팩토리',
 }
+// 출력되는 필드의 위치는 중요X
 console.log(yuJin7);
 
 const numbers = [1, 3, 5];
+// 추가 아이템의 위치를 맨앞, 맨뒤로 가능
 const numbers2 = [
     ...numbers,
     10,
