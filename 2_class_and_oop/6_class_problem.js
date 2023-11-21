@@ -175,3 +175,20 @@ const allTogether = new Country(
     ],
 );
 console.log(allTogether);
+
+const root = allTogether;
+
+// 인스턴스 메소드(sing, dance) 테스트
+  for (let i = 0; i < root.idolGroups.length; i++) {
+    //console.log(koreaGroups.idolGroups[i].name);
+    let countMembers = root.idolGroups[i].members.length;
+    let members = root.idolGroups[i].members;
+    //console.log(countMembers);
+    for (let j = 0; j < countMembers; j++) {
+      if (members[j] instanceof FemaleIdol) {
+        console.log(members[j].dance());
+      } else {
+        console.log(members[j].sing());
+      }
+    }
+  }
