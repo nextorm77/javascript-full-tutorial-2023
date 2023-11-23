@@ -26,6 +26,7 @@ console.log(Object.getOwnPropertyDescriptor(yuJin, 'year'));
  */
 console.log(Object.getOwnPropertyDescriptor(yuJin, 'name'));
 
+// 위 스태틱 함수명에 's'가 더 있음 -> 위 함수와 다름
 console.log(Object.getOwnPropertyDescriptors(yuJin));
 
 const yuJin2 = {
