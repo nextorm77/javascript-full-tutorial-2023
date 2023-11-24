@@ -46,11 +46,12 @@ console.log(yuJin2);
 console.log(yuJin2.age);
 
 yuJin2.age = 32;
-console.log(yuJin2.age);
+console.log(yuJin2.age); // 액세서 프로퍼티 속성 확인
 console.log(yuJin2.year);
 
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'age'));
 
+// defineProperty 스태틱 메소드는 신규 프로퍼티 생성 또는 기존 프로퍼티 변경 가능
 Object.defineProperty(yuJin2, 'height', {
     value: 172,
     writable: true,
@@ -58,6 +59,8 @@ Object.defineProperty(yuJin2, 'height', {
     configurable: true,
 })
 console.log(yuJin2);
+
+// 신규 또는 변경된 프로퍼티 속성 확인 
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'height'));
 
 yuJin2.height = 180;
@@ -69,10 +72,11 @@ console.log(yuJin2);
 Object.defineProperty(yuJin2, 'height', {
     writable:false,
 });
+// 신규 또는 변경된 프로퍼티 속성 확인
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'height'));
 
 console.log('-------------');
-yuJin2.height = 172;
+yuJin2.height = 172; // 오류 발생
 console.log(yuJin2);
 
 /**
@@ -87,6 +91,7 @@ Object.defineProperty(yuJin2, 'name', {
     enumerable:false,
 });
 
+// 신규 또는 변경된 프로퍼티 속성 확인
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'name'));
 
 console.log('-------------');
@@ -104,6 +109,7 @@ Object.defineProperty(yuJin2, 'height', {
     writable: true,
     configurable: false,
 });
+// 신규 또는 변경된 프로퍼티 속성 확인
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'height'));
 
 // Object.defineProperty(yuJin2, 'height', {
