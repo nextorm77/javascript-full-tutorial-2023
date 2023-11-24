@@ -9,6 +9,7 @@ const yuJin = {
         return new Date().getFullYear() - this.year;
     },
 
+    // 실제 출생년(year) 반환
     set age(age){
         this.year = new Date().getFullYear() - age;
     }
