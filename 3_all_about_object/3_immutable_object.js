@@ -9,7 +9,7 @@ const yuJin = {
         return new Date().getFullYear() - this.year;
     },
 
-    // 실제 출생년(year) 반환
+    // year(출생년) 프로퍼티 변경
     set age(age){
         this.year = new Date().getFullYear() - age;
     }
