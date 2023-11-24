@@ -95,7 +95,7 @@ for(let key in yuJin2){
     console.log(key);
 }
 console.log(yuJin2);
-console.log(yuJin2.name);
+console.log(yuJin2.name); // 열거가 안될뿐, 값은 가져올 수 있다.
 
 /**
  * Configurable
