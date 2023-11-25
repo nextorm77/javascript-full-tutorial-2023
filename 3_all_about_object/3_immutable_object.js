@@ -47,6 +47,7 @@ const yuJin2 = {
         return new Date().getFullYear() - this.year;
     },
 
+    // 출생년(this.year) 입력
     set age(age){
         this.year = new Date().getFullYear() - age;
     }
@@ -62,7 +63,7 @@ console.log(Object.isSealed(yuJin2));
 yuJin2['groupName'] = '아이브';
 console.log(yuJin2);
 
-delete yuJin2['name'];
+delete yuJin2['name']; // 에러 발생
 console.log(yuJin2);
 
 Object.defineProperty(yuJin2, 'name', {
