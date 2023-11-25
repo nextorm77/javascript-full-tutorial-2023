@@ -30,4 +30,4 @@ const IdolModelArrow = (name, year)=>{
     this.year = year;
 };
 
-const yuJin3 = new IdolModelArrow('안유진', 2003);
+const yuJin3 = new IdolModelArrow('안유진', 2003); // 오류 발생, 생성자 함수 구현시 일반함수만 가능
