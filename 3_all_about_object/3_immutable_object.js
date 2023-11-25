@@ -56,19 +56,19 @@ console.log(yuJin2);
 
 console.log(Object.isSealed(yuJin2));
 
-Object.seal(yuJin2);
+Object.seal(yuJin2); // 확장(Extensibel)도 비활성화
 
 console.log(Object.isSealed(yuJin2));
 
 yuJin2['groupName'] = '아이브';
 console.log(yuJin2);
 
-delete yuJin2['name']; // 에러 발생
+delete yuJin2['name']; // 에러 발생, 확장은 물론 축소(delete)도 안됨됨
 console.log(yuJin2);
 
 Object.defineProperty(yuJin2, 'name', {
     writable: false,
-});
+}); // 프로퍼티 속성은 변경 가능, 에러 없음
 console.log(Object.getOwnPropertyDescriptor(yuJin2, 'name'));
 
 /**
