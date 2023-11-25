@@ -30,7 +30,7 @@ Object.preventExtensions(yuJin);
 
 console.log(Object.isExtensible(yuJin));
 
-yuJin['groupName'] = '아이브';
+yuJin['groupName'] = '아이브'; // 에러 발생
 console.log(yuJin);
 
 delete yuJin['position'];
