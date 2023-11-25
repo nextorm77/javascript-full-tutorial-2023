@@ -115,4 +115,4 @@ const yuJin4 = {
 Object.freeze(yuJin4);
 
 console.log(Object.isFrozen(yuJin4));
-console.log(Object.isFrozen(yuJin4['wonYoung']));
+console.log(Object.isFrozen(yuJin4['wonYoung'])); // 객체안의 객체까지 freeze X
