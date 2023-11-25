@@ -17,7 +17,7 @@ function IdolModel(name, year){
 const yuJin = new IdolModel('안유진', 2003);
 console.log(yuJin);
 // console.log(yuJin.dance());
-const yuJin2 = IdolModel('안유진', 2003);
+const yuJin2 = IdolModel('안유진', 2003); // new 키워드 미사용시 'undefined' 출력, 반환값이 없기 때문
 console.log(yuJin2);
 // console.log(global.name);
 
