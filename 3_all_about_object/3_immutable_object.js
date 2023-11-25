@@ -33,7 +33,7 @@ console.log(Object.isExtensible(yuJin));
 yuJin['groupName'] = '아이브'; // 에러 발생
 console.log(yuJin);
 
-delete yuJin['position'];
+delete yuJin['position']; // 확장은 불가하지만 삭제는 됨
 console.log(yuJin);
 
 /**
