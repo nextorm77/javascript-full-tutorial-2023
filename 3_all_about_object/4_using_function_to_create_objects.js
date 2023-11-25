@@ -2,6 +2,7 @@
  * Using function to create objects
  */
 function IdolModel(name, year){
+    // new.target: new 키워드를 쓴 대상 표시?
     if(!new.target){
         return new IdolModel(name, year);
     }
