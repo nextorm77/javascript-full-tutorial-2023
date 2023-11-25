@@ -3,6 +3,9 @@
  */
 function IdolModel(name, year){
     // new.target: new 키워드를 쓴 대상 표시?
+
+    // new 키워드 미사용시 아래 코드 실행
+    // 필드에서 흔히 발생하는 실수(new 키워드 미사용) 방지
     if(!new.target){
         return new IdolModel(name, year);
     }
