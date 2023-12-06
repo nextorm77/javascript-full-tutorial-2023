@@ -19,6 +19,7 @@ console.log(IdolModel.prototype);
 // });
 
 // circular reference
+// 강의 키노트 관련 그림을 봐야 빨리 이해됨
 console.log(IdolModel.prototype.constructor === IdolModel);
 console.log(IdolModel.prototype.constructor.prototype === IdolModel.prototype);
 
