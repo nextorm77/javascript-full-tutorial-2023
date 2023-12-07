@@ -111,6 +111,7 @@ function IdolModel(name, year) {
     this.year = year;
 }
 
+// 프로토타입 메소드
 IdolModel.prototype.sayHello = function () {
     return `${this.name} 인사를 합니다.`;
 }
@@ -129,6 +130,8 @@ const ray = new FemaleIdolModel('레이', 2004);
 
 console.log(gaEul.__proto__);
 console.log(gaEul.__proto__ === IdolModel.prototype);
+
+// Object.getPrototypeOf(인스턴스명) === 인스턴스명.__proto__
 console.log(Object.getPrototypeOf(gaEul) === IdolModel.prototype);
 
 console.log(gaEul.sayHello());
