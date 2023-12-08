@@ -54,6 +54,7 @@ console.log(yuJin2.dance());
  */
 
 /**
+ * 기형적인 호출 및 로직 구조라 실제 적용이 거의 없다라고 자구 판단하고 Skip
  * 1) apply()
  * 2) call()
  * 3) bind()
