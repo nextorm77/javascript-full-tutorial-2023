@@ -62,7 +62,7 @@ function returnName(){
     return this.name;
 }
 
-console.log(returnName());
+console.log(returnName()); // undefined 오류 발생
 
 const yuJin3 = {
     name: '안유진',
