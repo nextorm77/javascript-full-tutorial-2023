@@ -14,7 +14,7 @@ function getNumber() {
     function innerGetNumber() {
         return number;
     }
-
+    // call stack상 클로저 상황 X => 하위함수 호출 후 해당 하위함수 바로 삭제
     return innerGetNumber();
 }
 
