@@ -41,7 +41,7 @@ console.log(runner());
  * 1) 데이터 캐싱
  */
 function cacheFunction() {
-    // 아래 계산은 매우 오래걸린다는 가정을 했을때
+    // 아래 계산은 매우 오래걸린다(리소스 점유율 높음)는 가정을 했을때
     var number = 10 * 10;
 
     function innerCacheFunction(newNumb){
@@ -51,9 +51,9 @@ function cacheFunction() {
     return innerCacheFunction;
 }
 
-const runner2 = cacheFunction();
-console.log(runner2(10));
-console.log(runner2(20));
+const runner2 = cacheFunction(); // 오래 걸리는 처리를 상위함수(cacheFunction)에서 한번만 처리 후 number에 저장
+console.log(runner2(10)); // 상위 함수에서 남긴 number 사용
+console.log(runner2(20)); // 상위 함수에서 남긴 number 사용
 
 function cacheFunction2(){
     var number = 99;
