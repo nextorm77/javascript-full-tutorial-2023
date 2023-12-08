@@ -77,7 +77,11 @@ console.log(runner3());
 
 /**
  * 3) 정보 은닉
+ * JS에 private 키워드 등장 이전에 사용한 방법?
  */
+
+// 생성자 함수(Idol): 상위 함수
+// 인스턴스 메소드(this.sayNameAndYear): 하위 함수수
 function Idol(name, year){
     this.name = name;
 
@@ -92,4 +96,4 @@ const yuJin = new Idol('안유진', 2003);
 console.log(yuJin.sayNameAndYear());
 
 console.log(yuJin.name);
-console.log(yuJin._year);
+console.log(yuJin._year);  // 멤버변수가 아니므로 오류발생
