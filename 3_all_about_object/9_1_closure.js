@@ -67,9 +67,9 @@ function cacheFunction2(){
 }
 
 const runner3 = cacheFunction2();
-console.log(runner3());
-console.log(runner3());
-console.log(runner3());
+console.log(runner3()); // 100
+console.log(runner3()); // 101
+console.log(runner3()); // 102
 console.log(runner3());
 console.log(runner3());
 console.log(runner3());
