@@ -38,9 +38,9 @@ console.log(yuJin2.sayHello());
 
 Person.prototype.dance = function(){
     function dance2(){
-        return `${this.name}이 춤을춥니다.`;
+        return `${this.name}이 춤을춥니다.`; // 이 구역에선 호출 객체 인지X => 이 this는 global 객체 또는 undefined
     }
-
+    // return `${this.name}이 춤을춥니다.` // 이 this는 호출 객체를 포인팅
     return dance2();
 }
 console.log(yuJin2.dance());
