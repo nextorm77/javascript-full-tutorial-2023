@@ -81,7 +81,7 @@ console.log(runner3());
  */
 
 // 생성자 함수(Idol): 상위 함수
-// 인스턴스 메소드(this.sayNameAndYear): 하위 함수수
+// 인스턴스 메소드(this.sayNameAndYear): 하위 함수
 function Idol(name, year){
     this.name = name;
 
@@ -93,7 +93,7 @@ function Idol(name, year){
 }
 
 const yuJin = new Idol('안유진', 2003);
-console.log(yuJin.sayNameAndYear());
+console.log(yuJin.sayNameAndYear()); // 상위함수(Idol)는 이 시점에 사라졌으나 하위함수(sayNo)에서 상위함수 값 보관
 
 console.log(yuJin.name);
 console.log(yuJin._year);  // 멤버변수가 아니므로 오류발생
