@@ -32,7 +32,7 @@ function getNumber() {
     return innerGetNumber;
 }
 
-const runner = getNumber();
+const runner = getNumber(); // 클로저 => 상위함수(getNumber) 호출 후 사라져도 하위함수(innerGetNumber) 생존
 
 console.log(runner);
 console.log(runner());
