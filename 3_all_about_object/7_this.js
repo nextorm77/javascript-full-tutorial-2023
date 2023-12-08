@@ -6,8 +6,9 @@
  * 
  * *****하지만 this 키워드는 바인딩이 객체가 생성되는 시점에 결정된다.
  */
+
 const testFunction = function(){
-    return this;
+    return this; // 강의 내용은 global 객체에 맵핑된다고 하는데, node(next 프레임워크)환경에선 undefined됨
 }
 
 console.log(testFunction());
