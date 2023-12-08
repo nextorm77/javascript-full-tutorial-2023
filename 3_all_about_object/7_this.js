@@ -12,7 +12,7 @@ const testFunction = function(){
 }
 
 console.log(testFunction());
-console.log(testFunction() === global);
+console.log(testFunction() === global); // node(next 프레임웍)에선 false(불일치)
 
 const yuJin = {
     name: '안유진',
