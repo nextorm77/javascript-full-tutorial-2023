@@ -41,9 +41,9 @@ const timeoutPromise = new Promise((resolve, reject) => {
 const getPromise = (seconds) => new Promise((resolve, reject) => {
     setTimeout(() => {
         // if(xxx){
-        //     resolve('성공')
+        //     resolve('성공') // .then 의 경우 반응?
         // }else{
-        //     reject('에러');
+        //     reject('에러'); // .catch 의 경우 반응?
         // }
         resolve('에러');
     }, seconds * 1000);
@@ -64,7 +64,7 @@ const getPromise = (seconds) => new Promise((resolve, reject) => {
 
 // Promise.all => 스태틱 메소드
 // 서로 연관 없는 Promise 객체 동시 실행 => 4초만에 반응, 순차실행했다면 6초
-// 아래의 경우 가장 느린 Promise 객체 기준으로 then 이후 실행
+// 아래의 경우 가장 느린 Promise 객체(4초만 반응) 기준으로 then 이후 실행
 Promise.all([
     getPromise(1),
     getPromise(4),
