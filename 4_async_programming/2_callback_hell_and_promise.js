@@ -64,6 +64,7 @@ const getPromise = (seconds) => new Promise((resolve, reject) => {
 
 // Promise.all => 스태틱 메소드
 // 서로 연관 없는 Promise 객체 동시 실행
+// 아래의 경우 가장 느린 Promise 객체 기준으로 then 이후 실행
 Promise.all([
     getPromise(1),
     getPromise(4),
