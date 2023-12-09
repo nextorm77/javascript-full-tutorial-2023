@@ -7,6 +7,7 @@ const getPromise = (seconds)=> new Promise((resolve, reject) => {
     }, seconds * 1000)
 });
 
+// 콜백 지옥의 최종 해결 방안?
 async function runner(){
     try{
         const result1 = await getPromise(1); // 정상실행(resolve() 실행)의 경우 resolve 인수 리턴, 에러(reject() 실행) 의 경우 catch 블록 이동?
