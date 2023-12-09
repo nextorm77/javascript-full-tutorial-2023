@@ -7,7 +7,6 @@
 ## 비동기 프로그래밍
 ![동기프로그래밍](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/2d3ba1bf-2176-4605-81ae-9ffb19f0cbcc)
 ![비동기_1](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/76f95d57-5c4a-4a7f-b49f-b431ed276884)
-![비동기_1](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/76f95d57-5c4a-4a7f-b49f-b431ed276884)
 ![비동기_2](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/b961c97a-cea3-462c-a8fa-8bcb2adcef99)
 ![비동기_3](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/a06e48f9-72f1-4f50-9a79-286ad22e0598)
 ![비동기_4](https://github.com/nextorm77/javascript-full-tutorial-2023/assets/90032559/0b478b99-5f28-4b4b-9ad0-2439a142a17b)
