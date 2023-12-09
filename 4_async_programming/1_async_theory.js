@@ -1,7 +1,6 @@
 /**
  * Async theory
  */
-// 동기 함수
 // function longWork() {
 //     const now = new Date();
 
@@ -25,7 +24,7 @@
 // console.log('World');
 
 function longWork(){
-    // 비동기 함수
+    // 비동기 함수(setTimeout)
     setTimeout(()=>{
         console.log('완료');
     }, 2000);
