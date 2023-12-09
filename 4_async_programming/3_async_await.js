@@ -9,7 +9,7 @@ const getPromise = (seconds)=> new Promise((resolve, reject) => {
 
 async function runner(){
     try{
-        const result1 = await getPromise(1);
+        const result1 = await getPromise(1); // 정상실행(resolve() 실행)의 경우 resolve 인수 리턴, 에러(reject() 실행) 의 경우 catch 블록 이동?
         console.log(result1);
         const result2 = await getPromise(2);
         console.log(result2);
