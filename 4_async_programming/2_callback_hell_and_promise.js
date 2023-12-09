@@ -62,6 +62,8 @@ const getPromise = (seconds) => new Promise((resolve, reject) => {
 //         console.log('--- finally ---');
 //     });
 
+// Promise.all => 스태틱 메소드
+// 서로 연관 없는 Promise 객체 실행
 Promise.all([
     getPromise(1),
     getPromise(4),
