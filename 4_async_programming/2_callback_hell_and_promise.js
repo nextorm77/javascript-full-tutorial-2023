@@ -72,3 +72,6 @@ Promise.all([
 ]).then((res)=>{
     console.log(res);
 });
+
+// 콘솔 결과
+// [ '에러', '에러', '에러' ]
