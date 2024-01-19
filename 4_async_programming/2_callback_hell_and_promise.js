@@ -33,9 +33,9 @@ const timeoutPromise = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-// timeoutPromise.then((res) => {
+// timeoutPromise.then((response) => {
 //     console.log('---then---');
-//     console.log(res);
+//     console.log(response);
 // });
 
 const getPromise = (seconds) => new Promise((resolve, reject) => {
@@ -50,13 +50,13 @@ const getPromise = (seconds) => new Promise((resolve, reject) => {
 });
 
 // getPromise(3)
-//     .then((res) => {
+//     .then((response) => {
 //         console.log('--- first then ---');
-//         console.log(res);
+//         console.log(response);
 //     })
-//     .catch((res)=>{
+//     .catch((response)=>{
 //         console.log('--- first catch ---');
-//         console.log(res);
+//         console.log(response);
 //     })
 //     .finally(()=>{
 //         console.log('--- finally ---');
@@ -69,8 +69,8 @@ Promise.all([
     getPromise(1),
     getPromise(4),
     getPromise(1),
-]).then((res)=>{
-    console.log(res);
+]).then((response)=>{
+    console.log(response);
 });
 
 // 콘솔 결과
