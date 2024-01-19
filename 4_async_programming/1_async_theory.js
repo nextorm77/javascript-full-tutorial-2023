@@ -1,6 +1,7 @@
 /**
  * Async theory
  */
+// 비동기 함수(setTimeout)없이 시간지연 발생 => 동기 함수?
 // function longWork() {
 //     const now = new Date();
 
@@ -19,9 +20,10 @@
 //     console.log('완료');
 // }
 
-// console.log('Hello');
-// longWork();
-// console.log('World');
+// 실행순서: 동기 -> 동기2 -> 동기3
+// console.log('Hello'); // 동기1
+// longWork(); // 동기2
+// console.log('World'); // 동기3
 
 function longWork(){
     // 비동기 함수(setTimeout)
@@ -30,6 +32,7 @@ function longWork(){
     }, 2000);
 }
 
-console.log('Hello');
-longWork();
-console.log('World');
+// 동기1 -> 동기2 -> 비동기1
+console.log('Hello'); // 동기1
+longWork(); // 비동기1
+console.log('World'); // 동기2
