@@ -25,7 +25,7 @@ function waitAndRun2() {
 // waitAndRun2();
 
 /**
- * Promise
+ * Promise: 비동기 로직(함수)에 성공(resolve -> then), 실패(reject -> catch)) 로직 wrapping?
  */
 const timeoutPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
